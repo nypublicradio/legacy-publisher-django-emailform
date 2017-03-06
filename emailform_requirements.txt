@@ -1,0 +1,8 @@
+# This pip requirements file contains the requirements of django-emailform
+# To run this file:
+# $ easy_install pip
+# $ pip install -r emailform_requirements.txt
+
+# for ordering inlines
+-e git://github.com/jpwatts/django-positions.git#egg=django-positions
+

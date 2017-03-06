@@ -1,0 +1,17 @@
+<h3>${emailform.title}</h3>
+<h4>${emailform.description}</h4>
+%if entered:
+  ${emailform.thanks_message}
+%else
+  %if forms:
+    <form method="POST" enctype="multipart/form-data">
+      %for form in forms:
+        ${form.as_p()}
+        %if form.question.required:
+            <span class="required">*required</span>
+        %endif
+      %endfor      
+      <p><input class="submit" type="submit" value="Submit Survey" /></p>
+    </form>
+  %endif
+%endif
